@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Holberton</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 22px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a.active {
+            color: yellow;
+        }
+
+        #Langue {
+            position: absolute;
+            top: 10px; /* Ajustez selon vos besoins */
+            right: 10px; /* Ajustez selon vos besoins */
+        }
+
+        .intro {
+            position: relative;
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            background: url('couverture.jpg') no-repeat center center/cover;
+            margin-top: 0px;
+        }
+
+        .intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .intro-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .intro h1 {
+            font-size: 3em;
+        }
+
+        .intro p {
+            font-size: 1.5em;
+            width: 50%;
+            min-width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin-top: 20px;
+            width: 30%;
+            min-width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            display: none;            /* A afficher si application déployée */
+        }
+
+        .features {
+            padding: 30px;
+            background:whitesmoke;
+        }
+
+        .features h3{
+            margin-top: 0px;
+            
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            background:white;
+            box-shadow: 10px 10px 5px #888888;
+        }
+
+        .feature:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .feature img {
+            width: 50%;
+            border-radius: 5px;
+            margin: 20px;
+
+        }
+
+        .feature-content {
+            width: 50%;
+            margin: 20px;
+        }
+
+        .about {
+            padding: 50px;
+            background: #fff;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .story {
+            margin: 0px;
+            padding: 20px;
+            border-radius: 10px;
+            color:whitesmoke;
+            background: #777777;
+            box-shadow: 10px 10px 5px #888888;
+        }
+        .team {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            margin-top: 50px;
+            border-radius: 50%;
+            box-shadow: 10px 10px 5px #888888;
+            width: 150px;
+            height: 150px;
+        }
+
+        .team-member a {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#intro">Introduction</a>
+            <a href="#features">Caractéristiques</a>
+            <a href="#about">À propos</a>
+        </nav>
+        <a id="Langue" href="LandingPageEN.html"><img src="flag-en.png" alt="English" style="width: 30px; height: 15px;"></a>
+    </header>
+    
+    <section class="intro" id="intro">
+        <div class="intro-content">
+            <h1>TABLEAUX DE BORD</h1>
+            <p>Outil qui permet de visualiser et mettre à jour l'avancement des projets de l'entreprise JARNOT n'importe où, par tous les acteurs et en temps réel.</p>
+            <button onclick="window.location.href='http://votre-projet-deploye.com';">Voir l'application</button>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+
+        <h2>Caractéristiques</h2>
+
+        <div class="feature">
+            <img src="Gestion_des_comptes.jpg" alt="Gestion_des_comptes">
+            <div class="feature-content">
+                <h3>Gestion des comptes des employés</h3>
+                <p>Donnez l'accès à l'application à vos employés et contrôlez leurs autorisations en fonction du poste qu'ils occupent.</p>
+                <p>Pour ajouter, supprimer ou modifier des comptes,il suffit d'ajouter, supprimer ou modifier des lignes d'un tableau dans un fichier Excel.</p>
+                <p>Pour ajouter, supprimer ou modifier des profils, il suffit d'ajouter, supprimer ou modifier des colonnes du même tableau.</p>
+                <p>Attribuez ensuite le ou les profils à chaque compte</p>
+            </p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="Gestion_des_Etapes_de_Production.jpg" alt="Gestion_des_Etapes_de_Production">
+            <div class="feature-content">
+                <h3>Définition des étapes de production de l'entreprise</h3>
+                <p>Pour ajouter, supprimer ou modifier les étapes de production de l'entreprise, il suffit d'ajouter, de supprimer ou de modifier les colonnes d'un tableau dans un fichier Excel.</p>
+                <p>Attribuez le profil nécessaire à chaque étape via une liste de choix mise à jour automatiquement avec la liste des profils déclarés à la gestion des comptes.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="Paquets_SEMA.jpg" alt="Paquets_SEMA">
+            <div class="feature-content">
+                <h3>Définition des paquets des Projets</h3>
+                <p>Les paquets sont définis dans le logiciel SEMA</p>
+                <p>Cela garantie une cohérence entre la conception et la production</p>
+                <p>Aucune adaptation est nécessaire. Le personnel du bureau d'étude de l'entreprise conçoit les projets sur le logiciel comme il a l'habitude de le faire.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="Ajout_de_projet_dans_application.jpg" alt="Ajout_de_projet_dans_application">
+            <div class="feature-content">
+                <h3>Ajout du Projet dans l'application</h3>
+                <p>A partir de SEMA, faîte un export Excel du projet. Puis à partir du fichier créé :</p>
+                <p>- Triez les paquets du projets dans l'ordre chronologique de production.</p>
+                <p>- Définissez les opérations à faire ou non</p>
+                <p>- Vous pouvez ajouter à chaque opération un message destiné aux opérateurs qui réaliseront l'opération.</p>
+                <p>- Puis cliquer sur le bouton [AJOUTER LE PROJET]</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="login.jpg" alt="Page de login">
+            <div class="feature-content">
+                <h3>Connexion à l'intranet de l'entreprise</h3>
+                <p>Chaque employé a qui un compte à été créé, peut consulter la progression de tous les projets de l'entreprise.</p>
+                <p>Cela peut ce faire à partir du bureau, des ateliers et des chantiers via une tablette et même leur téléphone.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="Choisir_Projet.jpg" alt="Page Choisir Projet">
+            <div class="feature-content">
+                <h3>Affichage des projets encours</h3>
+                <p>Tous les projets pas finis et les projets finis depuis moins de 7 jours.</p>
+                <p>Cela évite d'oublier les projets pas tout à fait fini...</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="Exemple_Tableau_de_bord.jpg" alt="Exemple Tableau de bord">
+            <div class="feature-content">
+                <h3>Visualisation et Mofication en temps réel de la progression des projets</h3>
+                <p>Chaque employé peut signaler la progression de son travail.</p>
+                <p>Superviseur, chefs d'atelier, conducteurs de travaux, chefs d'équipe,... tous ont une une vue d'ensembles des projets de l'entreprise et de leur avancement. Ils peuvent réagir plus rapidement si la prograssion n'est pas celle attendue. Mettre en place des actions correctives et ajuster le planning si besoin.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+        <h2>À propos</h2>
+        <div class="story">
+            <p>J’occupe depuis 2018, le poste de méthodiste pour le  <a href="https://www.groupe-bam.fr">groupe BAM</a>.
+                JARNOT est une entreprise de charpent/couverture du groupe.</p>
+            <p>A ce jour, les tableaux de bord existent déjà sous format papier.
+                Ces tableaux de bord ont été initiés il y 4 ans suite à un constat régulier que certains ‘paquets’ n’étaient pas prêts à temps ou incomplets.
+                Ce sont des situations qu’il faut absolument éviter car très coûteuses, entre autres aux étapes de ‘pose’ sur le site (chantier).</p>
+            <p>Ce sont surtout des problèmes de communication qui sont à l’origine de ces situations.
+                Les consignes étaient données oralement. Soient elles étaient mal données, mal comprises, oubliées où au mauvaises personnes,
+                voir perdues à la suite d’absences imprévues. Cela créait même des tensions entre le personnel.</p>
+            <p>Ces tableaux de bord ont considérablement réduit ce type de problème et améliorés l’organisation du travail. L’ouvrier doit cocher une étape lorsqu’il l’a réalisée.</p>
+            <p>Toutefois, cette solution présente plusieurs inconvénients : </p>
+            <ul>
+                <li>Le support papier se prête mal au partage, plusieurs ouvriers peuvent en avoir besoin en même temps.
+                    De ce fait, le document n’est pas toujours bien renseigné.</li>
+                <li>Les renseignements sont anonymes, cela ne permet pas de responsabiliser le personnel.</li>
+                <li>C’est un support (papier) qui peut se perdre ou s'abîmer surtout dans ce secteur d’activité soumis aux intempéries.</li>
+                <li>Il y a une grande latence pour remonter l’avancement des projets au superviseur.
+                    Il lui faut souvent attendre la fin de journée pour en prendre connaissance.
+                    Cela ne facilite pas la planification et son ajustement.</li>
+            </ul>
+            <p>En développant une application web, qui dématérialise le document papier, l’ensemble des inconvénients est résolu.</p>
+        </div>
+        <div class="team">
+            <div class="team-member">
+                <img src="yannick.jpg" alt="Yannick Mottais">
+                <h4>Yannick Mottais</h4>
+                <a href="https://www.linkedin.com/in/yannick-mottais-736604316/">LinkedIn</a>
+                <a href="https://github.com/Mottais">GitHub</a>
+            </div>
+
+        </div>
+        <p>Consultez le dépôt GitHub du projet <a href="https://github.com/Mottais/Portfolio-Dashboard">ici</a>.</p>
+    </section>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const startPosition = window.pageYOffset;
+                const targetPosition = targetElement.getBoundingClientRect().top + startPosition - 60; // Adjust for fixed header height
+                const distance = targetPosition - startPosition;
+                const duration = 2000; // Vitesse de défilement en millisecondes
+                let startTime = null;
+
+                function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animation);
+                }
+
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animation);
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                const topOffset = 500; // Gestion de la distance à partir delaquelle la surbrillance du menu de navigation agit
+
+                if (rect.top <= topOffset && rect.bottom >= topOffset) {
+                    const id = section.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href').substring(1) === id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

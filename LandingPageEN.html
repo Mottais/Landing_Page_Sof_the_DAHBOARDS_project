@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Holberton</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 22px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a.active {
+            color: yellow;
+        }
+        
+        #Langue {
+            position: absolute;
+            top: 10px; /* Ajustez selon vos besoins */
+            right: 10px; /* Ajustez selon vos besoins */
+        }
+
+        .intro {
+            position: relative;
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            background: url('couverture.jpg') no-repeat center center/cover;
+            margin-top: 0px;
+        }
+
+        .intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .intro-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .intro h1 {
+            font-size: 3em;
+        }
+
+        .intro p {
+            font-size: 1.5em;
+            width: 50%;
+            min-width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin-top: 20px;
+            width: 30%;
+            min-width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            display: none;            /* A afficher si application déployée */
+        }
+
+        .features {
+            padding: 30px;
+            background:whitesmoke;
+        }
+
+        .features h3{
+            margin-top: 0px;
+            
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            background:white;
+            box-shadow: 10px 10px 5px #888888;
+        }
+
+        .feature:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .feature img {
+            width: 50%;
+            border-radius: 5px;
+            margin: 20px;
+
+        }
+
+        .feature-content {
+            width: 50%;
+            margin: 20px;
+        }
+
+        .about {
+            padding: 50px;
+            background: #fff;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .story {
+            margin: 0px;
+            padding: 20px;
+            border-radius: 10px;
+            color:whitesmoke;
+            background: #777777;
+            box-shadow: 10px 10px 5px #888888;
+        }
+        .team {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            margin-top: 50px;
+            border-radius: 50%;
+            box-shadow: 10px 10px 5px #888888;
+            width: 150px;
+            height: 150px;
+        }
+
+        .team-member a {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#intro">Introduction</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </nav>
+        <a id="Langue" href="LandingPageFR.html"><img src="flag-fr.png" alt="French" style="width: 30px; height: 15px;"></a>
+    </header>
+
+    <section class="intro" id="intro">
+        <div class="intro-content">
+            <h1>DASHBOARDS</h1>
+            <p>Tool allowing visualization and real-time update of JARNOT company projects progress anywhere, by all stakeholders.</p>
+            <button onclick="window.location.href='http://your-deployed-project.com';">View Application</button>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+
+        <h2>Features</h2>
+
+        <div class="feature">
+            <img src="Gestion_des_comptes.jpg" alt="Account Management">
+            <div class="feature-content">
+                <h3>Employee Account Management</h3>
+                <p>Grant application access to your employees and control their permissions based on their roles.</p>
+                <p>To add, remove, or modify accounts, simply add, remove, or modify rows in an Excel file.</p>
+                <p>To add, remove, or modify profiles, simply add, remove, or modify columns in the same spreadsheet.</p>
+                <p>Then assign profile(s) to each account.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="Gestion_des_Etapes_de_Production.jpg" alt="Production steps Management">
+            <div class="feature-content">
+                <h3>Definition of Company Production steps</h3>
+                <p>To add, remove, or modify company production steps, simply add, remove, or modify columns in an Excel file.</p>
+                <p>Assign the necessary profile to each step using a dropdown list updated automatically with the list of profiles managed in account management.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="Paquets_SEMA.jpg" alt="Project Packages Definition">
+            <div class="feature-content">
+                <h3>Definition of Project Packages</h3>
+                <p>Packages are defined in the SEMA software.</p>
+                <p>This ensures consistency between design and production.</p>
+                <p>No adaptation is necessary. The company's design office staff designs projects in the software as they normally do.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="Ajout_de_projet_dans_application.jpg" alt="Adding Project to Application">
+            <div class="feature-content">
+                <h3>Adding Project to Application</h3>
+                <p>From SEMA, export the project to Excel. Then from the created file:</p>
+                <p>- Sort project packages in chronological order of production.</p>
+                <p>- Define operations to be performed or not.</p>
+                <p>- You can add a message to each operation for the operators who will perform it.</p>
+                <p>- Then click on the [ADD PROJECT] button.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="login.jpg" alt="Login Page">
+            <div class="feature-content">
+                <h3>Company Intranet Login</h3>
+                <p>Each employee with a created account can view the progress of all company projects.</p>
+                <p>This can be done from the office, workshops, and construction sites via a tablet and even their phone.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="Choisir_Projet.jpg" alt="Choose Project Page">
+            <div class="feature-content">
+                <h3>Display of Current Projects</h3>
+                <p>All unfinished projects and projects completed within the last 7 days.</p>
+                <p>This prevents forgetting projects that are not quite finished...</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <img src="Exemple_Tableau_de_bord.jpg" alt="Example Dashboard">
+            <div class="feature-content">
+                <h3>Real-time Visualization and Modification of Project Progress</h3>
+                <p>Each employee can report their work progress.</p>
+                <p>Supervisors, workshop managers, project managers, team leaders, ... all have an overview of company projects and their progress. They can react more quickly if the progress is not as expected, implement corrective actions, and adjust the schedule if necessary.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+        <h2>About</h2>
+        <div class="story">
+            <p>Since 2018, I have held the position of methodist for the <a href="https://www.groupe-bam.fr">BAM Group</a>.
+                JARNOT is a carpentry and roofing company within the group.</p>
+            <p>To date, dashboards already exist in paper format.
+                These dashboards were initiated 4 years ago following regular observations that some 'packages' were not ready on time or incomplete.
+                These are situations that must be avoided at all costs as they are very costly, especially during the 'installation' steps on site (construction site).</p>
+            <p>These dashboards have significantly reduced such issues and improved work organization. The worker must check a step when completed.</p>
+            <p>However, this solution has several disadvantages:</p>
+            <ul>
+                <li>Paper support does not lend itself well to sharing; several workers may need it at the same time.
+                    As a result, the document is not always well updated.</li>
+                <li>Information is anonymous, which does not foster accountability among personnel.</li>
+                <li>It is a (paper) medium that can be lost or damaged, especially in this sector exposed to weather conditions.</li>
+                <li>There is a significant delay in reporting project progress to the supervisor.
+                    Often, they have to wait until the end of the day to be informed.
+                    This complicates planning and adjustments.</li>
+            </ul>
+            <p>By developing a web application that digitizes the paper document, all these drawbacks are resolved.</p>
+        </div>
+        <div class="team">
+            <div class="team-member">
+                <img src="yannick.jpg" alt="Yannick Mottais">
+                <h4>Yannick Mottais</h4>
+                <a href="https://www.linkedin.com/in/yannick-mottais-736604316/">LinkedIn</a>
+                <a href="https://github.com/Mottais">GitHub</a>
+            </div>
+
+        </div>
+        <p>Check out the project's GitHub repository <a href="https://github.com/Mottais/Portfolio-Dashboard">here</a>.</p>
+    </section>
+</body>
+
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const startPosition = window.pageYOffset;
+                const targetPosition = targetElement.getBoundingClientRect().top + startPosition - 60; // Adjust for fixed header height
+                const distance = targetPosition - startPosition;
+                const duration = 2000; // Vitesse de défilement en millisecondes
+                let startTime = null;
+
+                function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const run = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animation);
+                }
+
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animation);
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                const topOffset = 500; // Gestion de la distance à partir delaquelle la surbrillance du menu de navigation agit
+
+                if (rect.top <= topOffset && rect.bottom >= topOffset) {
+                    const id = section.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href').substring(1) === id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
